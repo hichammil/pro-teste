@@ -7,130 +7,107 @@
     <meta http-equiv="refresh" content="">
 </head>
 <body>
-<style>
+    <style>
     .container{
-        background-color: antiquewhite;
-width: 80%;
-max-width: 600px;
-margin:0 auto;
-padding: 20px;
+border: 1px solid red;
+background-image: url(img/back.jpg);
+background-size:  100% 100%;
+max-width: 800px;
+margin:  0 auto; 
+padding: 0;
+height: 70vh;
 border-radius: 10px;
-border: solid 1px;
 text-align: center;
-height: 90vh;
+
+    }
+    .meni{
+       width:80vw;
+      transition: 0.5s;
+max-width: 0px;
+margin:  20px auto; 
+padding: 20px;
+height: 0vh;
+border-radius: 10px;
+display:flex;
+flex-wrap: wrap;
+text-align: center;
+background-color: rgba(65, 152, 209, 0.212);
+
+    }
+        .bit{
+       
+
+position: fixed;
+margin-top: 2vh;
+margin-left: 48vw;
+height: 6vh;
+border-radius: 10px;
+    }
+    .pp{
+          transition: 0.3s;
+width: 50%;
+height: 50%;
+border-radius: 10px;  
+margin: 10px auto;
+    }
+
+    
+    img{
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+    }
+    @media(max-width :600){
+    .container{
+border: 1px solid red;
+
+max-width: 800px;
+margin:  0 auto; 
+padding: 0;
+height: 70vh;
+border-radius: 10px;
+text-align: center;
 
     }
 
-.test{
-  
-    height: 5vh;
-    background-color: aquamarine;
-    border-radius: 10px ;
-    padding: 10px;
-   margin-top: 10px;
-   transition: 0.5s;
-   max-width: 500px;
-   font-size: 0%;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-img{
-    width: 10vw;
-    height: 5vh;
-    border-radius: inherit;
-    max-width: inherit;
-}
-
-
-
-</style>
-
-
-    <div id="con" class="container">
-      <h1>HICHAM -TAHAR</h1>
-<div id="a" class="test">
-<img onclick="a()" src="img/home.png" alt="">
-<ul style="color: red ;" onclick="red()">- red color</ul>
-<ul onclick="blue()" style="color: blue;">- blue color</ul>
-<ul onclick="black()" style="color: black;">- black color</ul>
+    }
+    
+    </style>
+<div class="container">
+<div id="meni" class="meni">
+<div class="pp"> <img src="image icon/calculator.gif" alt=""></div>
+<div class="pp"><img src="image icon/play.gif" alt=""></div>
+<div class="pp"><img src="image icon/power-button.gif" alt=""></div>
+<div class="pp"><img src="image icon/start.gif" alt=""></div>
 
 </div>
 
 
 
 
-    </div>
+
+
+</div>
+<div onclick="a()" class="bit"> <img  src="image icon/home.png" alt=""></div>
 <script>
-let x=false;
-function a() {
-    let w=document.getElementById ("a");
-    if (x){
+let x=false
+function a(){
+    let meni=document.getElementById ("meni");
+if (x){
+meni.style.maxWidth= "0px";
+meni.style.height="0vh"
 
-        w.style.fontSize ="0%";
-        w.style.height ="5vh";
-
-    }
-    else{
- w.style.fontSize ="100%";
-        w.style.height ="20vh";
-
-    }
-    x=!x;
-    
 }
-
-let rr=false;
-function red(){
-    let aa=document.getElementById ("con");
-
-    if (rr){
-
-        aa.style.backgroundColor ="antiquewhite"
-      
-
-    }
 else{
-aa.style.backgroundColor ="red"
+meni.style.maxWidth= "600px";
+meni.style.height="60vh"
+
 }
-    rr=!rr;
-    
+x=!x;
 }
-
-let oob=false;
-function blue(){
-    let aa=document.getElementById ("con");
-
-    if (oob){
-
-        aa.style.backgroundColor ="antiquewhite"
-      
-
-    }
-else{
-aa.style.backgroundColor ="blue"
-}
-    oob=!oob;
-    
-}
-
-let alo=false;
-function black(){
-    let aa=document.getElementById ("con");
-
-    if (alo){
-
-   aa.style.color ="black"
-
-        aa.style.backgroundColor ="antiquewhite"
-    }
-else{
-aa.style.backgroundColor ="black"
-aa.style.color ="antiquewhite"
-}
-    alo=!alo;
-    
-}
-
 </script>
+
+
 
 
 </body>
