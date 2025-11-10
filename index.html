@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <meta http-equiv="refresh" content="">
+    <meta http-equiv="refresh" content="2">
 </head>
 <body>
     <style>
@@ -44,6 +44,7 @@ height: 6vh;
 border-radius: 10px;
     }
     .pp{
+        display: flex;
           transition: 0.3s;
 width: 50%;
 height: 50%;
@@ -57,10 +58,19 @@ margin: 10px auto;
         height: inherit;
         border-radius: inherit;
     }
+    .play{
+        border: solid 1px ;
+                 transition: 0.3s;
+                 font-size: 0%;
+width: 0%;
+height: 0%;
+border-radius: 10px;  
+margin: 10px auto;
+background-color: aliceblue;
+    }
     @media(max-width :600){
     .container{
 border: 1px solid red;
-
 max-width: 800px;
 margin:  0 auto; 
 padding: 0;
@@ -75,10 +85,14 @@ text-align: center;
     </style>
 <div class="container">
 <div id="meni" class="meni">
-<div class="pp"> <img src="image icon/calculator.gif" alt=""></div>
-<div class="pp"><img src="image icon/play.gif" alt=""></div>
-<div class="pp"><img src="image icon/power-button.gif" alt=""></div>
-<div class="pp"><img src="image icon/start.gif" alt=""></div>
+<div class="pp"> <img onclick="rr()" src="image icon/calculator.gif" alt=""> <div id="tx" class="play"> <h1>HICHAM</h1>
+    <h2>-hicham</h2>
+    <h2>-hicham</h2>
+    <h2>-hicham</h2>
+</div></div>
+<div class="pp"><img src="image icon/play.gif" alt=""><div id="t" class="play"></div></div>
+<div class="pp"><img onclick="r()" src="image icon/power-button.gif" alt=""><div  id="t"  class="play"></div></div>
+<div class="pp"><img src="image icon/start.gif" alt=""><div class="play"></div></div>
 
 </div>
 
@@ -104,6 +118,23 @@ meni.style.height="60vh"
 
 }
 x=!x;
+}
+
+let t=false
+function rr(){
+    let meni=document.getElementById ("tx");
+if (t){
+meni.style.width= "0px";
+meni.style.height="0vh"
+meni.style.fontSize="0%"
+}
+else{
+meni.style.width= "50%";
+meni.style.height="50%"
+meni.style.fontSize="60%"
+
+}
+t=!t;
 }
 </script>
 
